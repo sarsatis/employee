@@ -1,0 +1,85 @@
+server:
+  port: 9090
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+
+
+spring:
+  datasource:
+    url: ${cloud.services.ams-ui.connection.jdbcUrl:jdbc:mysql://localhost:3306/attendence_ms?useSSL=false&user=root&password=root}
+
+  data:
+    mongodb:
+      database: Attendance
+      host: localhost
+      port: 27017
+
+  jpa:
+    properties:
+      hibernate.dialect:
+        org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    
+
+zuul:
+  routes:
+    employee.path : /manager
+    employee.service_id : manager
+    
+    getApprovalList.path : /getApprovalList
+    getApprovalList.service-id : manager
+    
+    ams.path : /js/ams1.js
+    ams.service-id : manager
+    
+    getPendingList.path : /getPendingList
+    getPendingList.service-id : manager
+    
+    Approved.path : /Approved
+    Approved.service-id : manager
+    
+    
+management:
+  security:
+    enabled: false
+    
+
+#security:
+#  oauth2:
+#    client:
+#      clientId: 0oab1uvlsil8EVVSP0h7
+#      clientSecret: j2Bd7-7XUNpqTcHuWAvv1xUB_CR3BGBhA81xKjoj
+#      accessTokenUri: https://dev-987187.oktapreview.com/oauth2/ausb210yj9JGB58ZG0h7/v1/token
+#      userAuthorizationUri: https://dev-987187.oktapreview.com/oauth2/ausb210yj9JGB58ZG0h7/v1/authorize
+#      clientAuthenticationScheme: form
+#      scope: openid profile email
+      
+#    resource:
+#      userInfoUri: https://dev-987187.oktapreview.com/oauth2/ausb210yj9JGB58ZG0h7/v1/userinfo
+#      preferTokenInfo: false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
