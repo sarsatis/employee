@@ -32,13 +32,13 @@ zuul:
     employee.path : /manager
     employee.service_id : manager
     
-    getApprovalList.path : /getApprovalList
+    getApprovalList.path : /getApprovalLi
     getApprovalList.service-id : manager
     
     ams.path : /js/ams1.js
     ams.service-id : manager
     
-    getPendingList.path : /getPendingList
+    getPendingList.path : /getPendingLi
     getPendingList.service-id : manager
     
     Approved.path : /Approved
