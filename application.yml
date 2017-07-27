@@ -50,38 +50,16 @@ management:
     enabled: false
     
 
-#security:
-#  oauth2:
-#    client:
-#      clientId: 0oab1uvlsil8EVVSP0h7
-#      clientSecret: j2Bd7-7XUNpqTcHuWAvv1xUB_CR3BGBhA81xKjoj
-#      accessTokenUri: https://dev-987187.oktapreview.com/oauth2/ausb210yj9JGB58ZG0h7/v1/token
-#      userAuthorizationUri: https://dev-987187.oktapreview.com/oauth2/ausb210yj9JGB58ZG0h7/v1/authorize
-#      clientAuthenticationScheme: form
-#      scope: openid profile email
+security:
+  oauth2:
+    client:
+      clientId: 0oab1uvlsil8EVVSP0h7
+      clientSecret: j2Bd7-7XUNpqTcHuWAvv1xUB_CR3BGBhA81xKjoj
+      accessTokenUri: https://dev-987187.oktapreview.com/oauth2/ausb210yj9JGB58ZG0h7/v1/token
+      userAuthorizationUri: https://dev-987187.oktapreview.com/oauth2/ausb210yj9JGB58ZG0h7/v1/authorize
+      clientAuthenticationScheme: form
+      scope: openid profile email
       
-#    resource:
-#      userInfoUri: https://dev-987187.oktapreview.com/oauth2/ausb210yj9JGB58ZG0h7/v1/userinfo
-#      preferTokenInfo: false
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+    resource:
+      userInfoUri: https://dev-987187.oktapreview.com/oauth2/ausb210yj9JGB58ZG0h7/v1/userinfo
+      preferTokenInfo: false
