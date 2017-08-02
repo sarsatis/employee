@@ -2,9 +2,18 @@ server:
   port: 9090
   
 eureka:
+  instance:
+    non-secure-port-enabled: false
+    secure-port-enabled: true
+    hostname: ${vcap.application.uris[0]:localhost:8761}
+    status-page-url: https://${eureka.instance.hostname}/info
+    health-check-url: https://${eureka.instance.hostname}/health
+    home-page-url: https://${eureka.instance.hostname}/
+    secure-virtual-host-name: https://${vcap.application.uris[0]:localhost:8761}
+  
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: ${vcap.services.eureka.credentials.url:http://localhost:8761/eureka/}
 
 
 
@@ -13,6 +22,10 @@ spring:
     url: ${cloud.services.ams-ui.connection.jdbcUrl:jdbc:mysql://localhost:3306/attendence_ms?useSSL=false&user=root&password=root}
   application:
     name: employee
+  profiles:
+    active:
+    - local
+    - cloud
 
   data:
     mongodb:
