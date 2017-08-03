@@ -1,7 +1,9 @@
+message : Hello World
+
 server:
   port: 9090
   
-message= Hello World
+
   
 eureka:
    client:
