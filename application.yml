@@ -13,7 +13,7 @@ eureka:
 
 spring:
   datasource:
-    url: ${cloud.services.ams-ui.connection.jdbcUrl:jdbc:mysql://localhost:3306/attendence_ms?useSSL=false&user=root&password=root}
+    url: spring.datasource.url:${cloud.services.ams-ui.connection.jdbcUrl:jdbc:mysql://us-cdbr-iron-east-05.cleardb.net:3306/ad_9da0fcff7b4ce21?useSSL=false&user=b810f49b01ba19&password=b0ba8895}
 
 
 
