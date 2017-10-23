@@ -1,4 +1,7 @@
 message : Empulse
+spring:
+  application:
+    name: employee
 server:
   port: 9090
   
