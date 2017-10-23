@@ -1,4 +1,4 @@
-message : Empulse
+message : AMS
 spring:
   application:
     name: employee
