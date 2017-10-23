@@ -1,7 +1,5 @@
 message : AMS
-spring:
-  application:
-    name: employee
+
 server:
   port: 9090
   
@@ -15,6 +13,8 @@ eureka:
 
 
 spring:
+  application:
+    name: employee
   datasource:
     url: jdbc:mysql://localhost:3306/ams-ui?useSSL=false&user=root&password=
 
